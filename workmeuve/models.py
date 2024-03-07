@@ -23,6 +23,9 @@ class User(models.Model):
     # last_login = models.DateTimeField(null=True, blank=True)
     phone_number = models.CharField(max_length=20)
 
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+
 class Driver(models.Model):
     first_name = models.CharField(max_length=45)
     last_name = models.CharField(max_length=45)
